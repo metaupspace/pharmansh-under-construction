@@ -67,7 +67,7 @@ const UnderConstructionPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-dark-black overflow-hidden relative">
+    <div className="min-h-screen bg-black text-dark-black overflow-hidden relative">
       {/* Animated Background Elements with improved visibility */}
       <div className="absolute inset-0 overflow-hidden">
         {floatingIcons.map(({ Icon, size, delay, position, color }, index) => (
@@ -127,13 +127,13 @@ const UnderConstructionPage = () => {
             whileHover={{ scale: 1.05 }}
           >
             <motion.div
-              className="absolute inset-0 bg-primary-blue/10 filter blur-xl rounded-full"
+              className="absolute inset-0 bg-primary-blue/20 filter blur-xl rounded-full"
               variants={pulseVariants}
               initial="initial"
               animate="animate"
             />
             <Image
-              src="/logo.svg"
+              src="/Logo.svg"
               alt="Pharmansh Logo"
               width={256}
               height={80}
