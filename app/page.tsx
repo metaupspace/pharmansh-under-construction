@@ -226,7 +226,7 @@ const UnderConstructionPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email for updates"
-                    className="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-full bg-white border-none outline-none text-dark-black placeholder:text-light-gray/60 focus:ring-2 focus:ring-primary-blue/50 transition-all duration-300 w-full text-base sm:text-lg"
+                      className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-full transition-colors ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'} border-none outline-none placeholder:text-light-gray/60 focus:ring-2 focus:ring-primary-blue/50 transition-all duration-300 w-full text-base sm:text-lg`}
                   />
                   
                   {/* Submit Button */}
