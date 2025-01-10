@@ -219,7 +219,7 @@ const UnderConstructionPage = () => {
                 />
                 
                 {/* Input Container */}
-                <div className="relative flex flex-col sm:flex-row gap-2 sm:gap-3 bg-white rounded-full p-1.5 sm:p-2">
+                <div className={`relative flex flex-col sm:flex-row gap-2 sm:gap-3 transition-colors ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'} rounded-full p-1.5 sm:p-2`}>
                   {/* Email Input */}
                   <input
                     type="email"
