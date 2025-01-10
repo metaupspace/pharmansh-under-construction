@@ -249,7 +249,7 @@ const UnderConstructionPage = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-6 flex items-center gap-2 text-primary-blue bg-white/90 px-4 py-2 rounded-full shadow-lg"
+                  className="absolute sm:left-1/2 sm:-translate-x-1/2 mt-6 flex items-center gap-2 text-primary-blue bg-white/90 px-4 py-2 rounded-full shadow-lg"
                 >
                   <AlertCircle className="w-5 h-5" />
                   <span className="text-sm sm:text-base">Thank you! We'll keep you updated.</span>
