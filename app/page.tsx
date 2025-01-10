@@ -197,16 +197,17 @@ const UnderConstructionPage = () => {
             </p>
           </motion.div>
 
-          {/* Email Signup */}
+          {/* Email Signup - Updated with Better Responsive Design */}
           <motion.div 
-            className="max-w-xl mx-auto w-full px-4"
+            className="max-w-xl mx-auto w-full px-4 sm:px-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
             <form onSubmit={handleSubmit} className="relative">
               <div className="relative group">
+                {/* Gradient Border */}
                 <motion.div
-                  className="absolute -inset-1 bg-gradient-to-r from-primary-blue via-secondary-blue to-primary-blue rounded-full opacity-30 group-hover:opacity-60 transition duration-500"
+                  className="absolute sm:-inset-1 bg-gradient-to-r from-primary-blue via-secondary-blue to-primary-blue sm:rounded-full  opacity-30 group-hover:opacity-60 transition duration-500"
                   animate={{
                     backgroundPosition: ['0%', '100%'],
                   }}
@@ -216,18 +217,23 @@ const UnderConstructionPage = () => {
                     repeatType: 'reverse',
                   }}
                 />
-                <div className="relative flex flex-col sm:flex-row gap-2 bg-white rounded-full p-1 shadow-lg">
+                
+                {/* Input Container */}
+                <div className="relative flex flex-col sm:flex-row gap-2 sm:gap-3 bg-white rounded-full p-1.5 sm:p-2">
+                  {/* Email Input */}
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email for updates"
-                    className="flex-1 px-6 py-4 rounded-full bg-white border-none outline-none text-dark-black placeholder:text-light-gray/60 focus:ring-2 focus:ring-primary-blue/50 transition-all duration-300 w-full"
+                    className="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-full bg-white border-none outline-none text-dark-black placeholder:text-light-gray/60 focus:ring-2 focus:ring-primary-blue/50 transition-all duration-300 w-full text-base sm:text-lg"
                   />
+                  
+                  {/* Submit Button */}
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto px-8 py-4 bg-primary-blue text-white rounded-full font-medium hover:bg-secondary-blue transition-colors duration-300 flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary-blue text-white rounded-full font-medium hover:bg-secondary-blue transition-colors duration-300 flex items-center justify-center gap-2 text-base sm:text-lg whitespace-nowrap"
                   >
                     Notify Me
                     <ArrowUpRight className="w-5 h-5" />
@@ -236,21 +242,22 @@ const UnderConstructionPage = () => {
               </div>
             </form>
 
-            {/* Success Message */}
+            {/* Success Message - Updated Positioning */}
             <AnimatePresence>
               {isSubmitted && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute left-1/2 -translate-x-1/2 mt-4 flex items-center gap-2 text-primary-blue"
+                  className="absolute left-1/2 -translate-x-1/2 mt-6 flex items-center gap-2 text-primary-blue bg-white/90 px-4 py-2 rounded-full shadow-lg"
                 >
                   <AlertCircle className="w-5 h-5" />
-                  <span>Thank you! We'll keep you updated.</span>
+                  <span className="text-sm sm:text-base">Thank you! We'll keep you updated.</span>
                 </motion.div>
               )}
             </AnimatePresence>
           </motion.div>
+
 
           {/* Progress Indicator */}
           <motion.div className="w-full max-w-md mx-auto space-y-2 px-4">
