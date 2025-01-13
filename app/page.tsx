@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowUpRight, Heart, Stethoscope, Pill, AlertCircle, Syringe, Bandage, Microscope, Activity, PillBottle, Moon, Sun } from 'lucide-react';
+import { ArrowUpRight, Heart, Stethoscope, Pill, AlertCircle, Syringe, Bandage, Microscope, Activity, PillBottle, Moon, Sun, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 const UnderConstructionPage = () => {
   const [email, setEmail] = useState('');
@@ -281,16 +281,24 @@ const UnderConstructionPage = () => {
 
           {/* Social Links */}
           <motion.div className="flex flex-wrap justify-center gap-4 md:gap-8 pt-8">
-            {['LinkedIn', 'Twitter', 'Instagram'].map((link) => (
+            {[
+              { name: 'LinkedIn', icon: <Linkedin />, href: '#' },
+              { name: 'Twitter', icon: <Twitter />, href: '#' },
+              { name: 'Instagram', icon: <Instagram />, href: '#' },
+            ].map(({ name, icon, href }) => (
               <motion.a
-                key={link}
-                href="#"
-                className="group relative"
+                key={name}
+                href={href}
+                className="group relative flex items-center justify-center"
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className={`block px-4 md:px-6 py-2 text-base md:text-lg ${theme === 'dark' ? 'text-light-gray' : 'text-gray-600'} group-hover:text-primary-blue transition-colors duration-300`}>
-                  {link}
+                <span
+                  className={`block p-2 md:p-3 rounded-full ${
+                    theme === 'dark' ? 'text-light-gray' : 'text-gray-600'
+                  } group-hover:text-primary-blue transition-colors duration-300`}
+                >
+                  {icon}
                 </span>
                 <motion.span
                   className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-blue origin-left"
