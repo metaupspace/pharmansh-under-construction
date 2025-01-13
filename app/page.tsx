@@ -174,7 +174,7 @@ const UnderConstructionPage = () => {
               animate="animate"
             />
             <Image
-              src="/Logo.svg"
+              src="/logoP.png"
               alt="Pharmansh Logo"
               width={256}
               height={80}
